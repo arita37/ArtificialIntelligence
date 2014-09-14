@@ -17,8 +17,8 @@ public class TreeNode<key, value> implements Iterable<key> {
 	private Node root;
 	private int N;
 	class Node{
-		key key;
-		value value;
+		public key key;
+		public value value;
 		boolean visited;
 		ArrayList<Node> adjacencyList=null;
 
