@@ -16,5 +16,7 @@ public class BreadthFirstSearch {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public value
 
 }
