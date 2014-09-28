@@ -16,8 +16,7 @@ public class StateGenerator {
 	 */
 	public static void main(String[] args) {
 
-	}
-	
+	}	
 
 	/**
 	 * Method to verify whether the new state is valid

@@ -3,16 +3,14 @@
  */
 package com.ai.academicprojects.cannibalsandmissionaries;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
 /**
- * @author Dany
+ * @author Dinesh Appavoo
  *
  */
 public class NodeExpansionAndBreadthFirstSearch {

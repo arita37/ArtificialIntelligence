@@ -41,30 +41,7 @@ public class State {
 				&& this.noOfMissionariesRight==3
 			);
 	}
-	
-	/**
-	 * Method to verify whether the current state is visited already or not
-	 * @param state
-	 * @return
-	 */
-	public boolean equals(State state)
-	{
-		return ( this.noOfCannibalsLeft==state.noOfCannibalsLeft
-				&& this.noOfCannibalsRight==state.noOfCannibalsRight
-				&&this.noOfMissionariesLeft==state.noOfMissionariesLeft
-				&&this.noOfMissionariesRight==state.noOfMissionariesRight
-				);
-	}
-	
-	/**
-	 * Method to print the states
-	 */
-	public void printState()
-	{
-		
-	}
-	
-	
+
 	/**
 	 * @param args
 	 */
