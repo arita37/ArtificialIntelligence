@@ -85,6 +85,9 @@ public class Graph<T extends Comparable<T>>{
 		return weight;
 	}
 	
+	/**
+	 *  Method to print the graph
+	 */
 	public void printGraph()
 	{
 		ArrayList<Edge> edgeList;
