@@ -20,6 +20,7 @@ public class NodeExpansionAndBreadthFirstSearch {
 	/**
 	 * @param args
 	 */
+	public static Set<State> visitedNodes=new HashSet<State>();
 	public static void main(String[] args) {
 
 		NodeExpansionAndBreadthFirstSearch bfs=new NodeExpansionAndBreadthFirstSearch();
@@ -28,8 +29,12 @@ public class NodeExpansionAndBreadthFirstSearch {
 		if(goalState==null)
 		{
 			System.out.println("Goal unreachable");
+		}else
+		{
+			System.out.println("LEFT SIDE OF RIVER       RIGHT SIDE OF RIVER");
+
+			bfs.printState(goalState);
 		}
-		bfs.printState(goalState);
 	}
 
 	public State expandNodesAndDoBFS(State startState)
@@ -41,22 +46,27 @@ public class NodeExpansionAndBreadthFirstSearch {
 		ArrayList<State> nextLevelStates;
 		Queue<State> queue=new LinkedList<State>();
 		startState.visited=true;
+		visitedNodes.add(startState);
 
 		queue.add(startState);
 		while(!queue.isEmpty())
 		{
 			State s=queue.poll();
+
 			nextLevelStates=StateGenerator.generateNextLevelStates(s);
 
 			for(State state : nextLevelStates)
 			{
 				if(state.visited==false)
 				{
-					if (state.isFinalStateReached()) {
-						return state;
-					} else
+					if(!visitedNodes.contains(state))
 					{
-						queue.add(state);
+						if (state.isFinalStateReached()) {
+							return state;
+						} else
+						{
+							queue.add(state);
+						}
 					}
 				}
 			}
@@ -69,7 +79,7 @@ public class NodeExpansionAndBreadthFirstSearch {
 		if(goal==null)
 			return;
 		printState(goal.parent);
-		System.out.println("("+goal.noOfCannibalsLeft+", "+goal.noOfMissionariesLeft+" )       ("+goal.noOfCannibalsRight+", "+goal.noOfMissionariesRight+" )");
+		System.out.println("    ("+goal.noOfCannibalsLeft+", "+goal.noOfMissionariesLeft+" )                   ("+goal.noOfCannibalsRight+", "+goal.noOfMissionariesRight+" )");
 	}
 
 }
