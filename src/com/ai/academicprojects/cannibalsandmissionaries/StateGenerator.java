@@ -24,12 +24,20 @@ public class StateGenerator {
 	 * @return
 	 */
 	public static boolean isValidState(State s) {
-		if (s.noOfMissionariesLeft < 0 || s.noOfMissionariesRight < 0
-				|| s.noOfCannibalsLeft < 0 || s.noOfCannibalsRight < 0) {
+		if (
+				s.noOfMissionariesLeft < 0 || s.noOfMissionariesRight < 0
+				|| s.noOfCannibalsLeft < 0 || s.noOfCannibalsRight < 0
+				
+			) {
 			return false;
 		}
-		if ((s.noOfCannibalsLeft > s.noOfMissionariesLeft && s.noOfMissionariesLeft > 0)
-				|| (s.noOfCannibalsRight > s.noOfMissionariesRight && s.noOfMissionariesRight > 0)) {
+		
+		
+		if (
+				(s.noOfCannibalsLeft > s.noOfMissionariesLeft && s.noOfMissionariesLeft > 0)
+				|| (s.noOfCannibalsRight > s.noOfMissionariesRight && s.noOfMissionariesRight > 0)
+				
+			) {
 			return false;
 		}
 
