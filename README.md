@@ -28,6 +28,9 @@ Many problems in AI can be solved in theory by intelligently searching through m
 * Best-first search
 * A* search
 
+###Projects
+* Cannibals and Missionaries
+
 
 ##Project Contributor
 
