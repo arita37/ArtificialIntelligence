@@ -41,6 +41,20 @@ public class State {
 				&& this.noOfMissionariesRight==3
 			);
 	}
+	
+	public String toString() {
+		String state = "<NumCannibalsOnLeft>	" + this.noOfCannibalsLeft
+				+ "</NumCannibalsOnLeft>";
+		state += "<NumCannibalsOnRight>		" + this.noOfCannibalsRight
+				+ "</NumCannibalsOnRight>	";
+		state += "<NumMissionariesOnLeft>	" + this.noOfMissionariesLeft
+				+ "</NumMissionariesOnLeft>		";
+		state += "<NumMissionariesOnRight>	" + this.noOfMissionariesRight
+				+ "</NumMissionariesOnRight>	";
+		state += "<IsBoatOnleft>" + String.valueOf(this.isBoatInLeft)
+				+ "</IsBoatOnleft>";
+		return state;
+	}
 
 	/**
 	 * @param args

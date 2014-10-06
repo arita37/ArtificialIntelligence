@@ -9,6 +9,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
+import com.ai.datastructure.puzzles.proj1.State1;
+
 /**
  * @author Dinesh Appavoo
  *
@@ -35,7 +37,7 @@ public class NodeExpansionAndBreadthFirstSearch {
 		}
 	}
 
-	public State expandNodesAndDoBFS(State startState)
+	public static State expandNodesAndDoBFS(State startState)
 	{
 		if(startState.isFinalStateReached())
 		{
@@ -79,5 +81,23 @@ public class NodeExpansionAndBreadthFirstSearch {
 		printState(goal.parent);
 		System.out.println("    ("+goal.noOfCannibalsLeft+", "+goal.noOfMissionariesLeft+" )                   ("+goal.noOfCannibalsRight+", "+goal.noOfMissionariesRight+" )");
 	}
+	
+/*	private static void printStates(State goalState) {
+
+		if (goalState == null) {
+			return;
+		}
+		printStates(goalState.parent);
+		System.out.println("<State>"+goalState.toString()+"</State>");
+	}
+
+	public static void main(String args[]) {
+		State initialState = new State(3, 3, 0, 0, true, null);
+		State goalState = expandNodesAndDoBFS(initialState);
+		if (goalState == null) {
+			System.out.println("Goal state cannot be reached");
+		} else
+			printStates(goalState);
+	}*/
 
 }
